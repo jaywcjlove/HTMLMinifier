@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "cp node_modules/html-minifier-next/dist/htmlminifier.umd.bundle.min.js ../Sources/HTMLMinifier/Resources"
+  },
+  "dependencies": {
+    "html-minifier-next": "1.2.1"
+  }
+}
