@@ -37,8 +37,8 @@ func collapseWhitespace() throws {
 @Test("Default options minification")
 func defaultMinification() throws {
     let html = #"<p title="test">  Hello World  </p><!-- comment -->"#
-    let result = try HTMLMinifier.minify(html)
-    
+    let option: HTMLMinifierOptions = .init(removeComments: true)
+    let result = try HTMLMinifier.minify(html, options: option)
     // Should remove comments, collapse whitespace, etc. based on default options
     #expect(result.contains("Hello World"))
     #expect(!result.contains("comment"))
